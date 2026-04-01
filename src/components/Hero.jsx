@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -10,11 +11,8 @@ const Hero = () => {
       </div>
 
       <nav className="nav">
-        <div className="logo">Kottankuchi.com</div>
+        <Link to="/" className="logo">Kottankuchi.com</Link>
         <ul className="nav-links">
-          <li><a href="#" className="nav-link">Work</a></li>
-          <li><a href="#" className="nav-link">About</a></li>
-          <li><a href="#" className="nav-link">Contact</a></li>
         </ul>
       </nav>
 
@@ -26,7 +24,7 @@ const Hero = () => {
           Explore all the popular losses of Indrajith in FC24, WWE2k25 and much more
         </p>
         <div className="hero-cta">
-          <a href="#" className="btn-primary">Explore Soothadis 🍑</a>
+          <Link to="/comparison" className="btn-primary">Explore Soothadis 🍑</Link>
         </div>
       </div>
 

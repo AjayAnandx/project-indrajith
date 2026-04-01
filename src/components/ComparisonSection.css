@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+
+.redesigned-page {
+  font-family: 'Outfit', sans-serif;
+  background-color: #020617;
+  color: white;
+  min-height: 100vh;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+
+.section-header-modern {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.title-gradient {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+}
+
+.subtitle-muted {
+  font-size: 1.3rem;
+  color: #94a3b8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* SECTION 1: Where the Battle Begins */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.video-card {
+  position: relative;
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 0px; 
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.video-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.8);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 100px;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
+  z-index: 5;
+}
+
+.badge-accent {
+  border-color: rgba(192, 132, 252, 0.5);
+  color: #c084fc;
+}
+
+.card-label {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.label-accent {
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SECTION 2: The Journey of Losses */
+.timeline-container {
+  overflow-x: auto;
+  padding: 60px 0;
+  scrollbar-width: none;
+}
+
+.timeline-container::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline-track {
+  display: flex;
+  position: relative;
+  min-width: 1800px; /* Increased to accommodate content */
+  padding: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(56, 189, 248, 0), #38bdf8, #c084fc, rgba(192, 132, 252, 0));
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-outer-item {
+  position: relative;
+  flex: 0 0 380px; /* Wider for micro-timeline */
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.item-date {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.item-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.video-placeholder-container {
+  width: 100%;
+}
+
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.timeline-video-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.video-placeholder:hover .timeline-video-preview {
+  opacity: 1;
+}
+
+.video-placeholder:hover {
+  background: rgba(56, 189, 248, 0.05);
+  border-color: #38bdf8;
+}
+
+.video-icon {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.item-info {
+  text-align: center;
+}
+
+.item-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.item-info p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Micro-Timeline Styles */
+.micro-timeline {
+  position: relative;
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.micro-line {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  bottom: 5px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.micro-event {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.micro-dot {
+  position: absolute;
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+.micro-time {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #38bdf8;
+  min-width: 35px;
+}
+
+.micro-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #38bdf8;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+@media (max-width: 768px) {
+  .title-gradient {
+    font-size: 3rem;
+  }
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
